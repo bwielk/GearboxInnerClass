@@ -26,6 +26,24 @@ public class Gearbox {
 		}
 	}
 	
+	public void changeGear(int newGear){
+		if(newGear >= 0 && (newGear < this.gears.size() && this.clutchIsIn)){
+			this.currentGear = newGear;
+			System.out.println("The gear " + newGear + " has been selected");
+		}else{
+			System.out.println("Grind!");
+		}
+	}
+	
+	public double wheelSpeed(int revs){
+		if(clutchIsIn){
+			System.out.println("The car is not accelerating");
+			return 0.0;
+		}else{
+			return revs*gears.get(currentGear).getRatio();
+		}
+	}
+	
 	private class Gear {
 		private int gearNumber;
 		private double ratio;
@@ -37,6 +55,10 @@ public class Gearbox {
 		
 		public double driveSpeed(int revs){
 			return revs*(this.ratio);
+		}
+		
+		public double getRatio(){
+			return ratio;
 		}
 	}
 }
