@@ -8,7 +8,7 @@ public class Main {
 	private static Button buttonPrint = new Button("Print");
 	
 	public static void main(String[] args){
-		//Gearbox example
+		//Local inner class example
 		Gearbox mcLaren = new Gearbox(5);
 		mcLaren.operatingClutch(true);
 		mcLaren.changeGear(1);
@@ -22,7 +22,7 @@ public class Main {
 		System.out.println(mcLaren.wheelSpeed(1000));
 		System.out.println("/////////////////////////////////");
 		
-		//Button example
+		//Nested interface example
 		
 		class ClickListener implements Button.OnClickListener {
 			

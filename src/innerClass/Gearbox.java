@@ -57,10 +57,6 @@ public class Gearbox {
 			this.ratio = ratio;
 		}
 		
-		public double driveSpeed(int revs){
-			return revs*(this.ratio);
-		}
-		
 		public double getRatio(){
 			return ratio;
 		}
