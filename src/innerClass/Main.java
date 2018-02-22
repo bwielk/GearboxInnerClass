@@ -37,6 +37,18 @@ public class Main {
 		
 		buttonPrint.setOnClickListener(new ClickListener());
 		listen(buttonPrint.getTitle());
+		System.out.println("/////////////////////////////////");
+		
+		//Anonymous class example
+		
+		buttonPrint.setOnClickListener(new Button.OnClickListener() {
+			
+			public void onClick(String title) {
+				System.out.println(title + " has been pushed");
+				
+			}
+		});
+		listen(buttonPrint.getTitle());
 	}
 	
 	private static void listen(String title){
